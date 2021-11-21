@@ -31,25 +31,73 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="63dp"
-                    android:orientation="horizontal"></LinearLayout>
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="305dp"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/id_activity_ajouter_afrigo_manuel_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nom" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="63dp"
-                    android:orientation="horizontal"></LinearLayout>
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/id_activity_ajouter_frigo_manuel_quantite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="quantité" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="64dp"
-                    android:orientation="horizontal"></LinearLayout>
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/id_activity_ajouter_frigo_manuel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Gatégorie" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="67dp"
                     android:orientation="horizontal">
 
+                    <Button
+                        android:id="@+id/id_activity_ajouter_frigo_button_ajouter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Ajouter" />
                 </LinearLayout>
             </LinearLayout>
+
+            <Button
+                android:id="@+id/id_activity_ajouter_frigo_ajouter_et_valider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ajouter et validé" />
         </LinearLayout>
     </FrameLayout>
 
