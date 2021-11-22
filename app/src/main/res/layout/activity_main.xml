@@ -6,12 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/fleche_retour" />
-
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="0dp"
@@ -42,4 +36,30 @@
             android:layout_height="wrap_content"
             android:text="Idées de recettes" />
     </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="96dp"
+        android:layout_height="80dp"
+        tools:layout_editor_absoluteX="314dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <ImageButton
+            android:id="@+id/id_activity_main_engrenage_paramètres"
+            android:layout_width="56dp"
+            android:layout_height="57dp"
+            android:src="@drawable/index" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="113dp"
+        android:layout_height="65dp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/fleche_retour" />
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

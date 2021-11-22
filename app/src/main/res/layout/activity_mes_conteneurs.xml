@@ -7,7 +7,7 @@
     tools:context=".Mes_conteneurs">
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/id_activity_mes_conteneurs_bouton_retour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/fleche_retour" />

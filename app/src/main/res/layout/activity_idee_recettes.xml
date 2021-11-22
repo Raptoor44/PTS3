@@ -7,13 +7,18 @@
     tools:context=".Idee_recettes">
 
     <FrameLayout
+        android:id="@+id/frameLayout6"
         android:layout_width="110dp"
-        android:layout_height="95dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="41dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/id_activity_idee_recettes_boutton_retour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/fleche_retour" />
@@ -35,12 +40,12 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="137dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="157dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout6">
 
         <ListView
             android:layout_width="match_parent"
