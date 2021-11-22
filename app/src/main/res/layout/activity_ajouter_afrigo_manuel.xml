@@ -6,18 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Ajouter_a_frigo_manuel">
 
-    <ImageButton
-        android:id="@+id/imageButton7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="47dp"
-        android:layout_marginBottom="60dp"
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout5"
-        app:layout_constraintEnd_toStartOf="@+id/textView6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fleche_retour" />
-
     <FrameLayout
         android:id="@+id/frameLayout5"
         android:layout_width="0dp"
@@ -26,7 +14,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,12 +32,12 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="305dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/id_activity_ajouter_afrigo_manuel_no"
-                            android:layout_width="match_parent"
+                            android:layout_width="410dp"
                             android:layout_height="wrap_content"
                             android:hint="Nom" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -111,16 +99,34 @@
         </LinearLayout>
     </FrameLayout>
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="391dp"
         android:layout_height="0dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="38dp"
-        android:text="Ajouter à frigo"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/frameLayout5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton7"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="179dp"
+            android:layout_height="196dp">
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="47dp"
+                android:layout_marginBottom="60dp"
+                app:srcCompat="@drawable/fleche_retour" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="119dp"
+            android:layout_height="320dp"
+            android:text="Ajouter à frigo" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

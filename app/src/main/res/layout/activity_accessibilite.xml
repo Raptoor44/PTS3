@@ -7,7 +7,7 @@
     tools:context=".Accessibilite">
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/id_activity_accessibilite_fleche_retour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"

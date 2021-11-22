@@ -37,29 +37,36 @@
             android:text="Idées de recettes" />
     </LinearLayout>
 
-    <FrameLayout
-        android:layout_width="96dp"
-        android:layout_height="80dp"
-        tools:layout_editor_absoluteX="314dp"
-        tools:layout_editor_absoluteY="0dp">
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="0dp"
+        android:layout_height="268dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/id_activity_main_engrenage_paramètres"
-            android:layout_width="56dp"
-            android:layout_height="57dp"
-            android:src="@drawable/index" />
-    </FrameLayout>
+        <FrameLayout
+            android:layout_width="354dp"
+            android:layout_height="wrap_content">
 
-    <FrameLayout
-        android:layout_width="113dp"
-        android:layout_height="65dp"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="0dp">
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/fleche_retour" />
+        </FrameLayout>
 
-        <ImageButton
-            android:id="@+id/imageButton"
+        <FrameLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/fleche_retour" />
-    </FrameLayout>
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/id_activity_main_engrenage_paramètres"
+                android:layout_width="56dp"
+                android:layout_height="57dp"
+                android:src="@drawable/index" />
+        </FrameLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
