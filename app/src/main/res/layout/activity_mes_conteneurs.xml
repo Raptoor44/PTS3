@@ -10,6 +10,8 @@
         android:id="@+id/id_activity_mes_conteneurs_bouton_retour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/fleche_retour" />
 
     <FrameLayout
@@ -22,8 +24,19 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ListView
+            android:id="@+id/id_activity_mes_conteneurs_list_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </FrameLayout>
+
+    <Button
+        android:id="@+id/id_activity_mes_conteneurs_ajouter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="110dp"
+        android:text="ajouter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

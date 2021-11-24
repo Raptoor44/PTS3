@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <FrameLayout
+        android:layout_width="421dp"
+        android:layout_height="172dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="134dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="222dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="TODO"
+                    app:srcCompat="@drawable/_1_rangement_frigo" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="217dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+                        android:text="Titre de la rubrique :"
+                        android:textColor="#ff0000" />
+
+                    <TextView
+                        android:id="@+id/id_adaptater_view_conteneurs"
+                        android:layout_width="match_parent"
+                        android:layout_height="121dp"
+                        android:textColor="#FDF1F1" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
