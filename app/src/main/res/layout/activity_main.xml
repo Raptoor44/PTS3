@@ -49,14 +49,7 @@
 
         <FrameLayout
             android:layout_width="354dp"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/fleche_retour" />
-        </FrameLayout>
+            android:layout_height="wrap_content"/>
 
         <FrameLayout
             android:layout_width="wrap_content"
