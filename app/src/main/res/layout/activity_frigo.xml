@@ -7,15 +7,19 @@
     tools:context=".Frigo">
 
     <FrameLayout
-        android:id="@+id/frameLayout"
+        android:id="@+id/id_activity_frigo_fram_layout"
         android:layout_width="414dp"
-        android:layout_height="533dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView">
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout8">
 
+        <ListView
+            android:id="@+id/id_activity_frigo_listview_aliment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </FrameLayout>
 
     <SearchView
@@ -25,7 +29,7 @@
         android:layout_marginStart="43dp"
         android:layout_marginEnd="43dp"
         android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintBottom_toTopOf="@+id/id_activity_frigo_fram_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -43,16 +47,33 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
-        android:layout_width="110dp"
-        android:layout_height="95dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        android:id="@+id/frameLayout8"
+        android:layout_width="85dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="101dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_activity_frigo_fram_layout"
+        app:layout_constraintEnd_toStartOf="@+id/id_activity_frigo_ajouter_produit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/id_activity_idee_recettes_boutton_retour"
+            android:id="@+id/id_activity_frigo_boutton_retour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/fleche_retour" />
     </FrameLayout>
+
+    <Button
+        android:id="@+id/id_activity_frigo_ajouter_produit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="ajouter_produit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout8"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,10 +8,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
+import com.example.pts3.model.Conteneurs;
 import com.example.pts3.model.Custom_list_conteneurs;
 import com.example.pts3.model.List_conteneurs;
 
@@ -27,6 +29,10 @@ public class Mes_conteneurs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mes_conteneurs);
 
+
+
+        this.descative_all_conteneurs();
+
         this.fleche_retour = findViewById(R.id.id_activity_mes_conteneurs_bouton_retour);
 
         final ListView listView = (ListView) findViewById(R.id.id_activity_mes_conteneurs_list_view);
@@ -36,6 +42,24 @@ public class Mes_conteneurs extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        public void onItemClick(AdapterView<?> a, View v, int position, long id) {
+            Intent intent = new Intent(getApplicationContext(), Frigo.class);
+            startActivity(intent);
+
+            for (Conteneurs conteneur : List_conteneurs.getConteneursList()) {
+
+                if (conteneur.getUni_id() == position) {
+                    conteneur.setIsvalid(true);
+                }
+
+            }
+
+
+            finish();
+
+        }
+    });
 
         fleche_retour.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,5 +80,11 @@ public class Mes_conteneurs extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void descative_all_conteneurs(){
+        for (Conteneurs conteneur : List_conteneurs.getConteneursList()) {
+            conteneur.setIsvalid(false);
+        }
     }
 }

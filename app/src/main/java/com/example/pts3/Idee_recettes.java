@@ -18,7 +18,7 @@ public class Idee_recettes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_idee_recettes);
 
-        this.boutton_retour = findViewById(R.id.id_activity_idee_recettes_boutton_retour);
+        this.boutton_retour = findViewById(R.id.id_activity_frigo_boutton_retour);
 
         this.boutton_retour.setOnClickListener(new View.OnClickListener() {
             @Override

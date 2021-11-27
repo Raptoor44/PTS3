@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.pts3.model.Conteneurs;
 import com.example.pts3.model.List_conteneurs;
@@ -23,7 +24,6 @@ public class Creer_conteneur extends AppCompatActivity {
         setContentView(R.layout.activity_creer_conteneur);
 
 
-
         this.ajouter = findViewById(R.id.id_activity_creer_conteneur_bouton_creer_conteneur);
         this.text = findViewById(R.id.id_activity_creer_conteneur_text_input);
 
@@ -32,6 +32,19 @@ public class Creer_conteneur extends AppCompatActivity {
             public void onClick(View view) {
                 String titre_conteneur;
                 titre_conteneur = text.getText().toString();
+
+
+                if (titre_conteneur.equals("")) {
+                    erreur_saisie();
+                }
+
+                for (Conteneurs conteneur : List_conteneurs.getConteneursList()) {
+                    if (conteneur.getNom().equals(titre_conteneur)) {
+                        erreur_saisie();
+
+                    }
+                }
+
 
                 List_conteneurs.getConteneursList().add(new Conteneurs(titre_conteneur));
 
@@ -43,6 +56,13 @@ public class Creer_conteneur extends AppCompatActivity {
         });
 
 
+    }
 
+    private void erreur_saisie() {
+        Toast.makeText(getApplicationContext(), "Erreur, un conteneur du même nom existe déjà", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(getApplicationContext(), Creer_conteneur.class);
+        startActivity(intent);
+
+        finish();
     }
 }

@@ -26,12 +26,7 @@ public class Custom_list_conteneurs extends BaseAdapter {
     }
 
 
-    public void Custom_list_conteneurs(Context aContext, List<Conteneurs> list) {
-        this.context = aContext;
-        this.listData = list;
-        layoutInflater = LayoutInflater.from(aContext);
 
-    }
 
 
     @Override
