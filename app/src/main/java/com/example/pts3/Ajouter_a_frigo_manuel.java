@@ -68,7 +68,11 @@ public class Ajouter_a_frigo_manuel extends AppCompatActivity {
                     Aliment aliment = new Aliment(titre.getText().toString(), quantite_, date_peremption.getText().toString());
                     for (Conteneurs conteneur : List_conteneurs.getConteneursList()) {
                         if (conteneur.isIsvalid() == true) {
+
+                            aliment.setId(conteneur.getStatic_id_aliment());
+                            conteneur.setStatic_id_aliment(conteneur.getStatic_id_aliment() + 1);
                             conteneur.getAliments().add(aliment);
+
                         }
                     }
 
@@ -78,7 +82,6 @@ public class Ajouter_a_frigo_manuel extends AppCompatActivity {
                 }
             }
         });
-
 
 
         this.retour = findViewById(R.id.id_activity_ajouter_afrigo_manuel_retour);

@@ -17,11 +17,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/id_activity_ajouter_afrigo_general_ajouter_produit_scan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
-        android:text="Button"
+        android:text="Ajouter produit scan"
         app:layout_constraintStart_toStartOf="@+id/id_activity_ajouter_afrigo_general_AJOUT_MANUEL"
         app:layout_constraintTop_toBottomOf="@+id/id_activity_ajouter_afrigo_general_AJOUT_MANUEL" />
 
@@ -31,8 +31,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
         android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintStart_toStartOf="@+id/id_activity_ajouter_afrigo_general_ajouter_produit_scan"
+        app:layout_constraintTop_toBottomOf="@+id/id_activity_ajouter_afrigo_general_ajouter_produit_scan" />
 
     <Button
         android:id="@+id/button7"

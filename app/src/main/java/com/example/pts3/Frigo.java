@@ -7,12 +7,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
+import com.example.pts3.aliment.Gestion_UnAliment;
+import com.example.pts3.model.Aliment;
 import com.example.pts3.model.Conteneurs;
 import com.example.pts3.model.Custom_list_aliment;
 import com.example.pts3.model.Custom_list_conteneurs;
@@ -57,9 +60,24 @@ public class Frigo extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
+        Conteneurs finalConteneur_ = conteneur_;
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
+                for (Aliment aliment : finalConteneur_.getAliments()) {
 
+
+                    Log.e("position layout " , position+ "");
+                    Log.e("id aliment ", aliment.getId()+"");
+
+                    if (position == aliment.getId()) {
+                        aliment.setIsvalide(true);
+                    }
+
+                    Intent intent = new Intent(getApplicationContext(), Gestion_UnAliment.class);
+                    startActivity(intent);
+                    finish();
+
+                }
 
             }
         });

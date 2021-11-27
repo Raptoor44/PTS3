@@ -14,6 +14,9 @@ public class Aliment {
     private String unite_quantite;
     private LocalDateTime date_ajout;
     private Date date_peremption;
+    private Boolean isvalide = false;
+
+    private int id;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public Aliment(String nom, int quantité, String unite_quantite) {
@@ -41,5 +44,21 @@ public class Aliment {
 
     public Date getDate_peremption() {
         return date_peremption;
+    }
+
+    public Boolean getIsvalide() {
+        return isvalide;
+    }
+
+    public void setIsvalide(Boolean isvalide) {
+        this.isvalide = isvalide;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

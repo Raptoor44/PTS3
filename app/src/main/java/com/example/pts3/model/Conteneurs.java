@@ -9,6 +9,7 @@ public class Conteneurs {
     private boolean isvalid;
     private static int id = 0;
     private int uni_id;
+    private int static_id_aliment = 0;
 
     public Conteneurs(String nom) {
         this.aliments = new ArrayList<Aliment>();
@@ -36,5 +37,22 @@ public class Conteneurs {
 
     public ArrayList<Aliment> getAliments() {
         return aliments;
+    }
+
+    public int getStatic_id_aliment() {
+        return static_id_aliment;
+
+    }
+
+    public void setStatic_id_aliment(int static_id_aliment) {
+        this.static_id_aliment = static_id_aliment;
+    }
+
+    public static void setId(int id) {
+        Conteneurs.id = id;
+    }
+
+    public static int getId() {
+        return id;
     }
 }

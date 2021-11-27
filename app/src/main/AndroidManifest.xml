@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design">
         <activity
+            android:name=".Conteneur.Gestion_unConteneur"
+            android:exported="false" />
+        <activity
+            android:name=".aliment.Gestion_UnAliment"
+            android:exported="false" />
+        <activity
+            android:name=".qrcode.Ajouter_a_frigo_qrcode"
+            android:exported="false" />
+        <activity
             android:name=".Creer_conteneur"
             android:exported="false" />
         <activity
