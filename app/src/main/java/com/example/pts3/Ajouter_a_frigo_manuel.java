@@ -19,6 +19,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Ajouter_a_frigo_manuel extends AppCompatActivity {
 
@@ -26,6 +27,7 @@ public class Ajouter_a_frigo_manuel extends AppCompatActivity {
     private TextInputEditText titre;
     private TextInputEditText quantite;
     private TextInputEditText date_peremption;
+    private TextInputEditText date_input;
 
     private ImageButton retour;
 
@@ -37,6 +39,7 @@ public class Ajouter_a_frigo_manuel extends AppCompatActivity {
         this.titre = findViewById(R.id.id_activity_ajouter_afrigo_manuel_nom);
         this.quantite = findViewById(R.id.id_activity_ajouter_frigo_manuel_quantite);
         this.date_peremption = findViewById(R.id.id_activity_ajouter_afrigo_manuel_date_peremption);
+        this.date_input = findViewById(R.id.id_activity_ajouter_afrigo_manuel_date_peremption);
 
 
         this.ajouter = findViewById(R.id.id_activity_ajouter_frigo_ajouter_et_valider);
@@ -64,8 +67,26 @@ public class Ajouter_a_frigo_manuel extends AppCompatActivity {
 
                 }
 
-                if (valide == true) {
-                    Aliment aliment = new Aliment(titre.getText().toString(), quantite_, date_peremption.getText().toString());
+                Date date = null;
+                boolean valide2_ = false;
+
+                try {
+                    date = new SimpleDateFormat("dd/MM/yyyy").parse(date_input.getText().toString());
+                    valide2_ = true;
+                } catch (ParseException e) {
+                    Toast.makeText(getApplicationContext(), "Erreur, vous n'avez pas entrez une date valide !, Veuillez recommencer",
+                            Toast.LENGTH_LONG).show();
+
+                    Intent intent = new Intent(getApplicationContext(), Ajouter_a_frigo_manuel.class);
+                    startActivity(intent);
+
+                    finish();
+
+                }
+
+
+                if (valide == true && valide2_ == true) {
+                    Aliment aliment = new Aliment(titre.getText().toString(), quantite_, date_peremption.getText().toString(), date);
                     for (Conteneurs conteneur : List_conteneurs.getConteneursList()) {
                         if (conteneur.isIsvalid() == true) {
 

@@ -133,7 +133,7 @@ public class Custom_list_aliment extends BaseAdapter implements Filterable {
                         if (data.toLowerCase().startsWith(constraint.toString())) {
                             FilteredArrList.add(new Aliment(mOriginalValues.get(i).getNom(),
                                     mOriginalValues.get(i).getQuantité(),
-                                    mOriginalValues.get(i).getUnite_quantite()));
+                                    mOriginalValues.get(i).getUnite_quantite(),  mOriginalValues.get(i).getDate_peremption()));
                             //  public Aliment(String nom, int quantité, String unite_quantite) {
 
 

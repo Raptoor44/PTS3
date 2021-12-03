@@ -39,7 +39,8 @@
                             android:id="@+id/id_activity_ajouter_afrigo_manuel_date_peremption"
                             android:layout_width="match_parent"
                             android:layout_height="49dp"
-                            android:hint="date de péremption" />
+                            android:hint="date de péremption"
+                            android:inputType="date" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
 
@@ -73,7 +74,8 @@
                             android:id="@+id/id_activity_ajouter_frigo_manuel_quantite"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="quantité" />
+                            android:hint="quantité"
+                            android:inputType="number" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
 

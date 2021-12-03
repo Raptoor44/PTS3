@@ -19,11 +19,13 @@ public class Aliment {
     private int id;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public Aliment(String nom, int quantité, String unite_quantite) {
+    public Aliment(String nom, int quantité, String unite_quantite, Date date_peremption) {
         this.nom = nom;
         this.quantité = quantité;
         this.unite_quantite = unite_quantite;
+        this.date_peremption = date_peremption;
         this.date_ajout = LocalDateTime.now();
+
     }
 
     public String getNom() {
