@@ -6,74 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".Frigo">
 
-    <FrameLayout
-        android:id="@+id/id_activity_frigo_fram_layout"
-        android:layout_width="414dp"
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout8">
-
-        <ListView
-            android:id="@+id/id_activity_frigo_listview_aliment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </FrameLayout>
-
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/id_activity_frigo_fram_layout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="170dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginBottom="7dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/searchView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <FrameLayout
-        android:id="@+id/frameLayout8"
-        android:layout_width="85dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginBottom="101dp"
-        app:layout_constraintBottom_toTopOf="@+id/id_activity_frigo_fram_layout"
-        app:layout_constraintEnd_toStartOf="@+id/id_activity_frigo_ajouter_produit"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/id_activity_frigo_boutton_retour"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/fleche_retour" />
-    </FrameLayout>
+        <LinearLayout
+            android:layout_width="409dp"
+            android:layout_height="224dp"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/id_activity_frigo_ajouter_produit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="ajouter_produit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/frameLayout8"
-        app:layout_constraintTop_toTopOf="@+id/textView3" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="170dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="27dp"
+                android:text="TextView" />
+
+            <FrameLayout
+                android:id="@+id/frameLayout8"
+                android:layout_width="407dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="161dp"
+                android:layout_marginBottom="36dp">
+
+                <ImageButton
+                    android:id="@+id/id_activity_frigo_boutton_retour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/fleche_retour" />
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/id_activity_frigo_searchView"
+                android:layout_width="351dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="rechercher" />
+
+            <Button
+                android:id="@+id/id_activity_frigo_ajouter_produit"
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="ajouter_produit" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+
+            <ListView
+                android:id="@+id/id_activity_frigo_listview_aliment"
+                android:layout_width="420dp"
+                android:layout_height="506dp" />
+        </FrameLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

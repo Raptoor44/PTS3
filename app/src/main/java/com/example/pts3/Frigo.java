@@ -1,37 +1,49 @@
 package com.example.pts3;
 
-import static com.example.pts3.model.List_conteneurs.conteneursList;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.SearchView;
 
 import com.example.pts3.aliment.Gestion_UnAliment;
 import com.example.pts3.model.Aliment;
 import com.example.pts3.model.Conteneurs;
 import com.example.pts3.model.Custom_list_aliment;
-import com.example.pts3.model.Custom_list_conteneurs;
 import com.example.pts3.model.List_conteneurs;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class Frigo extends AppCompatActivity {
 
     private ImageButton retour;
     private Button ajouter_produit;
 
+    private Custom_list_aliment adapter;
+    private EditText etSearch;
+    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_frigo);
 
+        etSearch = (EditText) findViewById(R.id.id_activity_frigo_searchView);
+        listView = (ListView)findViewById(R.id.id_activity_frigo_listview_aliment);
+
+        listView.setTextFilterEnabled(true);
 
         this.ajouter_produit = findViewById(R.id.id_activity_frigo_ajouter_produit);
         this.ajouter_produit.setOnClickListener(new View.OnClickListener() {
@@ -44,7 +56,7 @@ public class Frigo extends AppCompatActivity {
         });
 
 
-        final ListView listView = (ListView) findViewById(R.id.id_activity_frigo_listview_aliment);
+
 
 
         Conteneurs conteneur_ = null;
@@ -56,9 +68,14 @@ public class Frigo extends AppCompatActivity {
 
 
         }
-        Custom_list_aliment adapter = new Custom_list_aliment(this.getApplicationContext(), conteneur_.getAliments());
+        adapter = new Custom_list_aliment(this.getApplicationContext(), conteneur_.getAliments());
 
         listView.setAdapter(adapter);
+
+
+
+
+
 
         Conteneurs finalConteneur_ = conteneur_;
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -93,5 +110,40 @@ public class Frigo extends AppCompatActivity {
                 finish();
             }
         });
+
+
+
+
+
+
+// Add Text Change Listener to EditText
+        etSearch.addTextChangedListener(new TextWatcher() {
+
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // Call back the Adapter with current character to Filter
+
+                Log.e("Test listiner", "AAAAAAAAAAAAAAA");
+                adapter.getFilter().filter(s.toString());
+
+
+
+
+
+
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,int after) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
     }
+
+
 }
