@@ -15,6 +15,7 @@ import androidx.annotation.RequiresApi;
 
 import com.example.pts3.R;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,6 +68,8 @@ public class Custom_list_aliment extends BaseAdapter implements Filterable {
         TextView titre_layout = convertview.findViewById(R.id.id_adaptater_view_aliment_titre_produit);
         TextView date_peremption_layout = convertview.findViewById(R.id.id_adapter_view_aliment_date_peremption);
         TextView quantite_layout = convertview.findViewById(R.id.id_adapter_view_aliment_quantite);
+
+
 
 
         titre_layout.setText(aliment.getNom());
